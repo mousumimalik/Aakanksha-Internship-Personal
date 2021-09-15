@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aakanksha | Register as a Service Provider</title>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,600;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+  />
+
+    <link rel="stylesheet" href="service.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="login_signup.css">
+
+  </head>
+  <body>
+    <div id="container">
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="./index.html"><img src="./images/a.png" class="primary-icon" /></a>
+        </div>
+
+        <div class="nav-list">
+          <li class="list-item"><a href="./servicepage.html">Explore Employees</a></li>
+          <li class="list-item divider">
+            <a href="./service.html">Register as Services Provider</a>
+          </li>
+        </div>
+
+        <div class="login-signup">
+          <li class="list-item login"><a href="#">Login</a></li>
+          <li class="list-item sign-up"><a href="#">Sign up</a></li>
+        </div>
+      </nav>
+
+      <div class="form-container">
+        <div class="form">
+          <form class="signup-form" action="/register" method="post">
+            <!-- form header -->
+            <div class="form-header">
+              <h1>Register as a service provider</h1>
+            </div>
+
+            <!-- form body -->
+            <div class="form-body">
+              <!-- Firstname and Lastname -->
+              <div class="horizontal-group">
+                <div class="form-group left">
+                  <label for="firstname" class="label-title"
+                    >First name *</label
+                  >
+                  <input
+                    type="text"
+                    id="firstname"
+                    class="form-input"
+                    placeholder="enter your first name"
+                    required="required"
+                  />
+                </div>
+                <div class="form-group right">
+                  <label for="lastname" class="label-title">Last name</label>
+                  <input
+                    type="text"
+                    id="lastname"
+                    class="form-input"
+                    placeholder="enter your last name"
+                  />
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email" class="label-title">Email*</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-input"
+                  placeholder="enter your email"
+                  required="required"
+                />
+              </div>
+
+              <!-- Gender and Hobbies -->
+              <div class="horizontal-group">
+                <div class="form-group left">
+                  <label class="label-title">Gender:</label>
+                  <div class="input-group">
+                    <label for="male"
+                      ><input
+                        type="radio"
+                        name="gender"
+                        value="male"
+                        id="male"
+                      />
+                      Male</label
+                    >
+                    <label for="female"
+                      ><input
+                        type="radio"
+                        name="gender"
+                        value="female"
+                        id="female"
+                      />
+                      Female</label
+                    >
+                  </div>
+                </div>
+                <div class="form-group right">
+                  <label for="experience" class="label-title">Age</label>
+                  <input
+                    type="number"
+                    min="18"
+                    max="80"
+                    value="18"
+                    class="form-input"
+                  />
+                </div>
+              </div>
+
+              <!-- Service and salary -->
+              <div class="horizontal-group">
+                <div class="form-group left">
+                  <label class="label-title">What will you serve?</label>
+                  <select class="form-input" id="level">
+                    <option class="services" value="carpenter">
+                      Carpenter
+                    </option>
+                    <option class="services" value="electrician">
+                      Electrician
+                    </option>
+                    <option class="services" value="laundry">Laundryt</option>
+                    <option class="services" value="cook">Cook</option>
+                    <option class="services" value="turistguide">
+                      Turist Guide
+                    </option>
+                    <option class="services" value="plumber">Plumber</option>
+                    <option class="services" value="technician">
+                      Technician
+                    </option>
+                  </select>
+                </div>
+                <div class="form-group right">
+                  <label for="salary" class="label-title"
+                    >Salary Expected</label
+                  >
+                  <input
+                    type="range"
+                    min="20"
+                    max="100"
+                    step="5"
+                    value="0"
+                    id="experience"
+                    class="form-input"
+                    onChange="change();"
+                    style="height: 28px; width: 78%; padding: 0"
+                  />
+                  <span id="range-label">20k</span>
+                </div>
+              </div>
+
+              <!-- Experience -->
+              <div class="form-group">
+                <label for="experience" class="label-title"
+                  >Experience in years</label
+                >
+                <select class="form-input" name="services">
+                  <option class="experience" value="experience0-2">0-2</option>
+                  <option class="experience" value="experience3-5">3-5</option>
+                  <option class="experience" value="experience6-8">6-8</option>
+                  <option class="experience" value="experience9-11">
+                    9-11
+                  </option>
+                  <option class="experience" value="experience12-14">
+                    12-14
+                  </option>
+                  <option class="experience" value="experience15-18">
+                    15-18
+                  </option>
+                  <option class="experience" value="experience19-21">
+                    19-21
+                  </option>
+                </select>
+              </div>
+
+              <!-- Documents and proof -->
+              <div class="horizontal-group">
+                <div class="form-group left">
+                  <label for="choose-file" class="label-title"
+                    >Government Identity Proof</label
+                  >
+                  <input type="file" id="choose-file" size="80" />
+                </div>
+                <div class="form-group right">
+                  <label for="choose-file" class="label-title"
+                    >Work Experience Document</label
+                  >
+                  <input type="file" id="choose-file" size="80" />
+                </div>
+              </div>
+
+              <!-- Bio -->
+              <div class="form-group">
+                <label for="choose-file" class="label-title">Bio</label>
+                <textarea
+                  class="form-input"
+                  rows="4"
+                  cols="50"
+                  style="height: auto"
+                ></textarea>
+              </div>
+
+              <!-- Passwrod and confirm password -->
+              <div class="horizontal-group">
+                <div class="form-group left">
+                  <label for="password" class="label-title">Password *</label>
+                  <input
+                    type="password"
+                    id="password"
+                    class="form-input"
+                    placeholder="enter your password"
+                    required="required"
+                  />
+                </div>
+                <div class="form-group right">
+                  <label for="confirm-password" class="label-title"
+                    >Confirm Password *</label
+                  >
+                  <input
+                    type="password"
+                    class="form-input"
+                    id="confirm-password"
+                    placeholder="enter your password again"
+                    required="required"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- form-footer -->
+            <div class="form-footer">
+              <span>* required</span>
+              <button type="submit" class="btn">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-main-content">
+            <div class="left box">
+                <h2 class="header-text">About Us</h2>
+                <div class="header-content">
+                    <p class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos optio labore reiciendis, ad libero delectus laborum cum illo nam magni fugiat praesentium exercitationem. Corrupti possimus quas animi, id quidem deserunt.</p>
+                    <div class="social">
+                        <a href="https://twitter.com/AAKANKS57852311" target="_blank"><span class="social-links"><i class="fab fa-twitter"></i></span> </a>
+                        <a href="https://www.facebook.com/AAKANKSHAcompany" target="_blank"><span class="social-links"><i class="fab fa-facebook-square"></i></span> </a>
+                        <a href="https://www.linkedin.com/company/aakankshaecommerce/?viewAsMember=true" target="_blank"><span class="social-links"><i class="fab fa-linkedin"></i></span> </a>
+                        <a href="https://www.instagram.com/aakankshacompany/" target="_blank"><span class="social-links"><i class="fab fa-instagram"></i></span> </a>
+                        <a href="https://www.youtube.com/channel/UCQ79LZ_IrnxzkFL5MZxxOeg" target="_blank"><span class="social-links"><i class="fab fa-youtube"></i></span> </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center box">
+                <h2 class="header-text">Address</h2>
+                <div class="header-content">
+                    <div class="place">
+                        <span class=""><i class='fas fa-map-marker-alt'></i></span>
+                        <span class="text">Vijayanagar, Banglore</span>
+                    </div>
+                    <div class="phone">
+                        <span class=""><i class='fas fa-phone'></i></span>
+                        <span class="text">+089-918273646</span>
+                    </div>
+                    <div class="email">
+                        <span class=""><i class='fas fa-envelope'></i></span>
+                        <span class="text">aakanksha@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right box">
+                <h2 class="header-text">Contact Us</h2>
+                <div class="header-content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email*</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message*</div>
+                            <textarea cols="25" rows="2" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+       
+        <div class="footer-line"></div>
+        <div class="copyrights">
+          <i class="far fa-copyright"></i>
+          Aakanksha || 2021
+        </div>
+    </footer>
+
+      <!-- login signup box -->
+      <div class="modal hide">
+        <div class="signup-modal hide">
+          <form action="" class="form" id="signup">
+            <h1 class="form-title">Sign Up</h1>
+            <div class="form-message form-message-error"></div>
+            <div class="form-input-group">
+              <input
+                type="text"
+                id="signupUsername"
+                class="form-input"
+                autofocus
+                placeholder="username"
+              />
+              <div class="form-input-error-message"></div>
+            </div>
+            <div class="form-input-group">
+              <input
+                type="email"
+                class="form-input"
+                autofocus
+                placeholder="email"
+              />
+              <div class="form-input-error-message"></div>
+            </div>
+            <div class="form-input-group">
+              <input
+                type="password"
+                class="form-input"
+                autofocus
+                placeholder="password"
+              />
+              <div class="form-input-error-message"></div>
+            </div>
+            <div class="form-input-group">
+              <input
+                type="password"
+                class="form-input"
+                autofocus
+                placeholder="confirm password"
+              />
+              <div class="form-input-error-message"></div>
+            </div>
+            <button class="form-button" type="submit">Continue</button>
+            <p class="form-text">
+              <a href="./" class="form-link" id="link-login-account"
+                >Already have an account? Sign in</a
+              >
+            </p>
+          </form>
+        </div>
+
+        <div class="login-modal hide">
+          <form action="" class="form" id="login-form">
+            <h1 class="form-title">Login</h1>
+            <div class="form-message form-message-error"></div>
+            <div class="form-input-group">
+              <input
+                type="text"
+                class="form-input"
+                autofocus
+                placeholder="username or email"
+              />
+              <div class="form-input-error-message"></div>
+            </div>
+            <div class="form-input-group">
+              <input
+                type="password"
+                class="form-input"
+                autofocus
+                placeholder="password"
+              />
+              <div class="form-input-error-message"></div>
+            </div>
+            <button class="form-button" type="submit">Continue</button>
+            <p class="form-text">
+              <a href="#" class="form-link">Forgot Password?</a>
+            </p>
+            <p class="form-text">
+              <a href="./" class="form-link" id="link-create-account"
+                >Don't have account yet?</a
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="backdrop hide"></div>
+
+    <!-- Script for range input label -->
+    <script>
+      var rangeLabel = document.getElementById("range-label");
+      var experience = document.getElementById("experience");
+
+      function change() {
+        rangeLabel.innerText = experience.value + "k";
+      }
+    </script>
+    <script src="./service.js"></script>
+  </body>
+</html>
