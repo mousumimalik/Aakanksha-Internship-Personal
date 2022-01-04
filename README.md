@@ -2,4 +2,4 @@
 JavaScript HTML CSS Bootstrap
 
 # URL
-[CLICK](https://mousumimalik.github.io/Aakanksha-Internship-Personal/)
+[CLICK HERE](https://mousumimalik.github.io/Aakanksha-Internship-Personal/)
