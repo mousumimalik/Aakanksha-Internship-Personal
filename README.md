@@ -1,4 +1,5 @@
 # Aakanksha-Internship-Personal
 JavaScript HTML CSS Bootstrap
 
-#CLICKHERE[https://mousumimalik.github.io/Aakanksha-Internship-Personal/]
+# URL
+[CLICK](https://mousumimalik.github.io/Aakanksha-Internship-Personal/)
